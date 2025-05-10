@@ -3,7 +3,11 @@ on:
   push:
   workflow_dispatch:
   schedule:
-    - cron: "0 */24 * * *"
+    - cron: "0 5 * * *"
+
+permissions:
+  contents: write
+
 jobs:
   build:
     name: Make gitartwork SVG
