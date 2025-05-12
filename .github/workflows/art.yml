@@ -20,6 +20,9 @@ jobs:
           user_name: awnion
           # Text on contribution graph
           text: awnion
+      - name: Clean artwork
+        run: |
+          sed -i 's/<a[^>]*>.*<\/a>//g' ./gitartwork.svg
       - name: Commit files
         run: |
           git config user.name "Sergei Blinov"
